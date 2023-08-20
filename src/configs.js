@@ -14,9 +14,9 @@ module.exports = {
     secret: process.env.JWT_SECRET,
     expiresIn: process.env.JWT_EXPIRESIN,
   },
-  cloud_name : "dzpmgwb8t",
+  cloud_name : process.env.CLOUD_NAME,
 
-  cl_apiKey : 412446846419928,
+  cl_apiKey : process.env.CLOUD_API_KEY,
   
-  cl_apiSecret: "FjcXcXmJHnjA8JfNL-smC1tT5TY"
+  cl_apiSecret: process.env.CLOUD_API_SECRET
 };
