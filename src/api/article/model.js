@@ -45,12 +45,12 @@ const ArticleSchema = new mongoose.Schema(
     },
     image: {
       type: String,
-      required: false,
+      required: true,
     },
 
     imageCloudinaryPublicId: {
       type: String,
-      required: false,
+      required: true,
     },
   },
   {
