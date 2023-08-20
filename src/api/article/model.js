@@ -6,21 +6,21 @@ const ArticleSchema = new mongoose.Schema(
       {
         type: String,
         enum: [
-          "Others",
-          "Sports",
-          "Tech",
-          "Politics",
-          "Art",
-          "Design",
-          "Culture",
-          "Production",
+          "others",
+          "sports",
+          "oech",
+          "politics",
+          "art",
+          "design",
+          "culture",
+          "production",
         ],
         default: ["Others"],
       },
     ],
     content: {
       type: String,
-      default: "No content"
+      default: "No content",
     },
     title: {
       type: String,

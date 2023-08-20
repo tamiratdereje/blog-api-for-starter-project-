@@ -15,7 +15,6 @@ exports.addArticle = async (req, res, next) => {
     req.body.image = pictureURL;
     req.body.imageCloudinaryPublicId = picturePublic;
     console.log(req.body);
-
     const article = await Article.create(req.body);
 
     return res.status(200).json({
@@ -46,7 +45,7 @@ exports.getAllArticles = async (req, res, next) => {
   };
 
   if (tags.length > 0) {
-    query.tags = { $in: tags };
+    query.tags = { $in: tags};
   }
 
   const articles = await Article.find(query).populate({
@@ -91,7 +90,7 @@ exports.editArticle = async (req, res, next) => {
   var pictureURL, picturePublic;
 
   try {
-    const article = await Article.findById(req.body.id);
+    const article = await Article.findById(req.params.id);
 
     if (!article)
       return next(
